@@ -29,7 +29,7 @@ wss.on('connection', function(ws, req) {
 });
 
 app.get('/edit/:id', function(req, res) {
-  var doc = connection.get('examples', req.params.id);
+  var doc = connection.get('collaborative_community', req.params.id);
   doc.fetch(function(err) {
     if (err) throw err;
     if (doc.type === null) {
@@ -39,6 +39,10 @@ app.get('/edit/:id', function(req, res) {
   });
   res.render('index.ejs', {'id': req.params.id});
 })
+
+app.get('/view/:id', function(req, res) {
+  res.render('view.ejs', {'id': req.params.id});
+});
 
 server.listen(8080);
 console.log('Listening on http://localhost:8080');

@@ -17,7 +17,7 @@ window.connect = function() {
 };
 
 
-var doc = connection.get('examples', id);
+var doc = connection.get('collaborative_community', id);
 doc.subscribe(function(err) {
   if (err) throw err;
   // var quill = new Quill('#editor', {theme: 'snow'});
