@@ -16,8 +16,8 @@ window.connect = function() {
   connection.bindToSocket(socket);
 };
 
-// Create local Doc instance mapped to 'examples' collection document with id 'richtext'
-var doc = connection.get('examples', 'richtext');
+
+var doc = connection.get('examples', id);
 doc.subscribe(function(err) {
   if (err) throw err;
   var quill = new Quill('#editor', {theme: 'snow'});
