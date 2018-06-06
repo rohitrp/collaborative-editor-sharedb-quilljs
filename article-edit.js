@@ -40,7 +40,7 @@ doc.subscribe(function(err) {
     [{ 'align': [] }],
   
     ['clean'],
-    ['link', 'image']                                        // remove formatting button
+    ['link', 'image', 'video']                                        // remove formatting button
   ];
   
   var quill = new Quill('#editor', {
