@@ -30,5 +30,11 @@ doc.subscribe(function(err) {
   
   quill.setContents(doc.data);
 
+  // Change view of article if it gets edited in realtime
+  doc.on('op', function(op, source) {
+    if (source === quill) return;
+    quill.updateContents(op);
+  });
+
   document.getElementById('toolbar').outerHTML = "";  
 });
