@@ -4,7 +4,9 @@
   "description": "A simple rich-text editor example based on Quill and ShareDB",
   "main": "server.js",
   "scripts": {
-    "build": "mkdir -p static/dist/ && ./node_modules/.bin/browserify client.js -o static/dist/bundle.js",
+    "build-edit-js": "./node_modules/.bin/browserify article-edit.js -o static/dist/article-edit.js",
+    "build-view-js": "./node_modules/.bin/browserify article-view.js -o static/dist/article-view.js",
+    "build": "mkdir -p static/dist/ && npm run -s build-edit-js && npm run -s build-view-js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
