@@ -19,6 +19,7 @@
     "quill": "^1.0.0-beta.11",
     "rich-text": "^3.0.1",
     "sharedb": "^1.0.0-beta",
+    "sharedb-mongo": "^1.0.0-beta.4",
     "websocket-json-stream": "^0.0.1",
     "ws": "^1.1.0"
   },

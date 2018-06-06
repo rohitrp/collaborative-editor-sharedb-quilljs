@@ -6,7 +6,9 @@ var WebSocket = require('ws');
 var WebSocketJSONStream = require('websocket-json-stream');
 
 ShareDB.types.register(richText.type);
-var backend = new ShareDB();
+
+const db = require('sharedb-mongo')('mongodb://localhost:27017/test');
+var backend = new ShareDB({db});
 
 var app = express();
 app.use(express.static('static'));
